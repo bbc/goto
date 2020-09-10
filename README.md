@@ -9,7 +9,16 @@ goto vsnb
 
 ## Install
 
-Clone this repo, then add your configuration and an alias to your `.bashrc` or `.zshrc`.
+This code in the Digital Publishing team's [Homebrew tap](https://github.com/bbc/homebrew-dpub). If you are set up on that (see the documentation on the tap), you can just:
+
+```
+brew tap bbc/dpub
+brew install bbc/dpub/goto
+```
+
+Alternatively, you can clone this repo.
+
+After installing, add your configuration and an alias to your `.bashrc` or `.zshrc`.
 
 ```bash
 export GOTO_WORKSPACE="$HOME/code"
@@ -24,7 +33,7 @@ For example, `goto igm` is equivalent to `cd $GOTO_WORKSPACE/int-gel-matter`.
 
 Providing the full name of a project also works, for example `goto professor-cam`.
 
-Using `goto` with no arguments will take you to the root of your workspace. 
+Using `goto` with no arguments will take you to the root of your workspace.
 
 ## Configure
 
