@@ -12,7 +12,6 @@ echo "Creating new release on github for $name"
 
 echo "Creating release: $tag"
 release=$(curl -XPOST -H "Authorization:token $GITHUB_ACCESS_TOKEN" --data "{\"tag_name\": \"$tag\", \"target_commitish\": \"master\", \"name\": \"$name\", \"body\": \"$description\", \"draft\": false, \"prerelease\": true}" https://api.github.com/repos/bbc/$name/releases)
- $GITHUB_ACCESS_TOKEN" --data "{\"tag_name\": \"$tag\", \"target_commitish\": \"master\", \"name\": \"$name\", \"body\": \"$description\", \"draft\": false, \"prerelease\": true}" https://api.github.com/repos/bbc/$name/releases)
 
 # Extract the id of the release from the creation response
 id=$(echo $release | jq -r .id)
